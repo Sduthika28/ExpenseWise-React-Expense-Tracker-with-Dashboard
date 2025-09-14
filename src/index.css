@@ -1,0 +1,176 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Personal Finance Dashboard Design System 
+Modern fintech-inspired colors with professional trust-building palette
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core Background & Text */
+    --background: 210 25% 98%;
+    --foreground: 215 25% 15%;
+
+    /* Card & Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+    --card-shadow: 210 25% 85%;
+
+    /* Popover Colors */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary Ocean Blue - Main brand color */
+    --primary: 210 85% 25%;
+    --primary-foreground: 0 0% 100%;
+    --primary-light: 210 75% 35%;
+    --primary-glow: 210 85% 45%;
+
+    /* Secondary Teal Accent */
+    --secondary: 180 25% 90%;
+    --secondary-foreground: 180 85% 25%;
+    --teal: 180 85% 35%;
+    --teal-light: 180 65% 45%;
+
+    /* Success Green for positive values */
+    --success: 145 85% 35%;
+    --success-light: 145 65% 45%;
+    --success-bg: 145 45% 95%;
+
+    /* Warning for expenses */
+    --warning: 25 85% 55%;
+    --warning-light: 25 65% 65%;
+    --warning-bg: 25 45% 95%;
+
+    /* Muted Colors */
+    --muted: 210 20% 95%;
+    --muted-foreground: 215 15% 55%;
+
+    /* Accent Colors */
+    --accent: 180 45% 92%;
+    --accent-foreground: 180 85% 25%;
+
+    /* Destructive */
+    --destructive: 0 85% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs */
+    --border: 210 20% 88%;
+    --input: 210 20% 92%;
+    --ring: 210 85% 25%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
+    --gradient-teal: linear-gradient(135deg, hsl(var(--teal)), hsl(var(--teal-light)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(var(--card-shadow) / 0.15);
+    --shadow-md: 0 8px 25px -8px hsl(var(--card-shadow) / 0.25);
+    --shadow-lg: 0 16px 40px -12px hsl(var(--card-shadow) / 0.35);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.3);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Core Background & Text - Dark Mode */
+    --background: 215 25% 6%;
+    --foreground: 210 20% 95%;
+
+    /* Card & Surface Colors - Dark Mode */
+    --card: 215 25% 8%;
+    --card-foreground: 210 20% 95%;
+    --card-shadow: 215 25% 4%;
+
+    /* Popover Colors - Dark Mode */
+    --popover: 215 25% 8%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Primary Ocean Blue - Dark Mode */
+    --primary: 210 95% 65%;
+    --primary-foreground: 215 25% 8%;
+    --primary-light: 210 85% 75%;
+    --primary-glow: 210 95% 80%;
+
+    /* Secondary Teal Accent - Dark Mode */
+    --secondary: 215 20% 15%;
+    --secondary-foreground: 180 85% 65%;
+    --teal: 180 95% 65%;
+    --teal-light: 180 85% 75%;
+
+    /* Success Green - Dark Mode */
+    --success: 145 95% 55%;
+    --success-light: 145 85% 65%;
+    --success-bg: 145 25% 12%;
+
+    /* Warning - Dark Mode */
+    --warning: 25 95% 65%;
+    --warning-light: 25 85% 75%;
+    --warning-bg: 25 25% 12%;
+
+    /* Muted Colors - Dark Mode */
+    --muted: 215 20% 12%;
+    --muted-foreground: 215 15% 65%;
+
+    /* Accent Colors - Dark Mode */
+    --accent: 215 20% 15%;
+    --accent-foreground: 210 20% 95%;
+
+    /* Destructive - Dark Mode */
+    --destructive: 0 95% 65%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders & Inputs - Dark Mode */
+    --border: 215 20% 18%;
+    --input: 215 20% 15%;
+    --ring: 210 95% 65%;
+
+    /* Updated Gradients for Dark Mode */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--success)), hsl(var(--success-light)));
+    --gradient-teal: linear-gradient(135deg, hsl(var(--teal)), hsl(var(--teal-light)));
+    --gradient-card: linear-gradient(135deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-bg: linear-gradient(180deg, hsl(var(--background)), hsl(var(--muted)));
+
+    /* Dark Mode Shadows */
+    --shadow-sm: 0 2px 8px -2px hsl(var(--card-shadow) / 0.5);
+    --shadow-md: 0 8px 25px -8px hsl(var(--card-shadow) / 0.6);
+    --shadow-lg: 0 16px 40px -12px hsl(var(--card-shadow) / 0.7);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
