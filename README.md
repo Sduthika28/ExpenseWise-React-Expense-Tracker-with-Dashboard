@@ -1,5 +1,5 @@
 # 💰 Expense Tracker Dashboard 
-(https://expensetrackwithdashboard.netlify.app/)
+Click the Link: https://expensetrackwithdashboard.netlify.app/
 
 A responsive **Expense Tracker Web App** built with **React** and **Tailwind CSS**.  
 This app helps users manage their income and expenses, track savings, and visualize data with interactive dashboards and charts.
